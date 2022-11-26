@@ -15,9 +15,10 @@ import design_pattern.design_pattern.Behavioral.Ｍemento.*;
 import design_pattern.design_pattern.Behavioral.Strategy.*;
 import design_pattern.design_pattern.Behavioral.TemplateMethod.*;
 import design_pattern.design_pattern.Behavioral.Command.*;
+import design_pattern.design_pattern.Behavioral.Visitor.*;
 
 public class App {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Command.UseCommand();
+        Visitor.UseVisitor();
     }
 }
