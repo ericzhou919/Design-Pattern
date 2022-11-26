@@ -14,12 +14,10 @@ import design_pattern.design_pattern.Behavioral.Observer.*;
 import design_pattern.design_pattern.Behavioral.Ｍemento.*;
 import design_pattern.design_pattern.Behavioral.Strategy.*;
 import design_pattern.design_pattern.Behavioral.TemplateMethod.*;
-/**
- * Hello world!
- *
- */
+import design_pattern.design_pattern.Behavioral.Command.*;
+
 public class App {
     public static void main(String[] args) throws CloneNotSupportedException {
-        TemplateMethod.UseTemplateMethod();
+        Command.UseCommand();
     }
 }
