@@ -12,13 +12,14 @@ import design_pattern.design_pattern.Behavioral.ChainOfResponsibility.*;
 import design_pattern.design_pattern.Behavioral.Iterator.*;
 import design_pattern.design_pattern.Behavioral.Observer.*;
 import design_pattern.design_pattern.Behavioral.Ｍemento.*;
-import design_pattern.design_pattern.Behavioral.Strategy.*;;
+import design_pattern.design_pattern.Behavioral.Strategy.*;
+import design_pattern.design_pattern.Behavioral.TemplateMethod.*;
 /**
  * Hello world!
  *
  */
 public class App {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Strategy.UseStrategy();
+        TemplateMethod.UseTemplateMethod();
     }
 }
