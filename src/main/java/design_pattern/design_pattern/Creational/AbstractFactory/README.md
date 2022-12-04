@@ -6,7 +6,7 @@
 
 > 食物工廠根據各種主食及肉類進行不同的搭配  
 
-|  | Beef |Pork |
-|-------|:-----:|------:|
-| Noodles   |  BeefNoodles  |   PorkNoodles|
-|  Rice   |  BeefRice  |   PorkRice |
+|  | Beef |Pork|
+|-------|:-----:|:------:|
+| Noodles   |  BeefNoodles  |PorkNoodles|
+| Rice   |  BeefRice  |   PorkRice |
