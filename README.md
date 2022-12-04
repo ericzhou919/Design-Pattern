@@ -1,6 +1,6 @@
 # Self Practice Design Pattern
 
-查閱相關文獻，研究學習設計模式的概念和例子
+查閱相關文獻，研究學習設計模式的概念和實作例子練習
 
 ## Creational Patterns 
 * [AbstractFactory](https://github.com/zhouchenyu000/self-practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/AbstractFactory)
