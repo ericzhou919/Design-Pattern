@@ -6,8 +6,7 @@
 
 > 食物工廠根據各種主食及肉類進行不同的搭配  
 
-| 表頭1 | 表頭2 | 表頭3 |
+|  | Beef | Pork |
 |-------|:-----:|------:|
-| 左1   |  中1  |   右1 |
-| 左2   |  中2  |   右2 |
-| 左3   |  中3  |   右3 |
+| Noodles   |  BeefNoodles  |   PorkNoodles|
+| Rice   |  BeefRice  |   PorkRice |
