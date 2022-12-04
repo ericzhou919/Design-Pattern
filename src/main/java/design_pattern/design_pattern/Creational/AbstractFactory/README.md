@@ -5,7 +5,7 @@
 ## 例子   
 
 > 食物工廠根據各種主食及肉類進行不同的搭配  
-
-|  | Beef | Pork |
-| Noodles | Content Cell  |
-| Rice  | Content Cell  |
+> | Name     | Character |
+| ---      | ---       |
+| Backtick | `         |
+| Pipe     | \|        |
