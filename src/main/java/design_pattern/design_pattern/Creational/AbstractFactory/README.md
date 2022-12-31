@@ -12,7 +12,7 @@
 | Rice   |  BeefRice  |   PorkRice |  
   
 ## 程式碼範例  
-首先，建立食物的介面與實現
+首先，建立食物的介面與實現。
 ```java
 public interface Rice {
     void getDescription();
@@ -35,4 +35,6 @@ public class BeefNoodles implements Noodles {
     }
 }
 
-```
+```  
+
+然後建立食物工廠的介面與實現。
