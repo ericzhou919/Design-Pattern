@@ -1,4 +1,4 @@
-#Practice Design Pattern
+# Practice Design Pattern
 
 查閱相關文獻，研究學習設計模式的概念和實作例子練習
 
