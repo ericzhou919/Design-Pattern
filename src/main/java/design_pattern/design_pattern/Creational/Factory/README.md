@@ -28,7 +28,7 @@ public class TenDollarCoin implements Coin {
 }
 ```  
 
-定義可使用的硬幣種類。  
+定義可製造的硬幣種類。  
 ```java
 public enum CoinType {
     TEN, FIVE;
