@@ -1,4 +1,4 @@
-package design_pattern.design_pattern.Creational.Builder.Model;
+package design_pattern.design_pattern.Creational.Builder;
 
 public enum Profession {
 

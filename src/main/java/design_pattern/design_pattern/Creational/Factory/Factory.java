@@ -8,5 +8,4 @@ public class Factory {
         coinTen.getDescription();
         coinFive.getDescription();
     }
-
 }
