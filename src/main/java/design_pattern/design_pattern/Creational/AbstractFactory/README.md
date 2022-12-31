@@ -105,7 +105,7 @@ public class AbstractFactory
 }
 ```  
 
-## 輸出：  
+輸出：  
 ```java
 This is the Beef Noodles!
 This is the Beef Rice!
