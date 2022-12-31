@@ -9,4 +9,29 @@
 |  | Beef |Pork|
 |-------|:-----:|:------:|
 | Noodles   |  BeefNoodles  |PorkNoodles|
-| Rice   |  BeefRice  |   PorkRice |
+| Rice   |  BeefRice  |   PorkRice |  
+  
+## 程式碼範例  
+```java
+public interface Rice {
+    void getDescription();
+}
+
+public interface Noodles {
+    void getDescription();
+}
+
+public class BeefRice implements Rice {
+    @Override
+    public void getDescription() {
+        System.out.println("This is the Beef Rice!");
+    }
+}
+public class BeefRice implements Rice {
+    @Override
+    public void getDescription() {
+        System.out.println("This is the Beef Rice!");
+    }
+}
+
+```
