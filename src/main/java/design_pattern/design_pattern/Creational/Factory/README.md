@@ -58,7 +58,7 @@ coinTen.getDescription();
 coinFive.getDescription();
 ```  
 
-## 輸出：  
+輸出：  
 ```java
 This is a ten dollar coin.
 This is a five dollar coin.
