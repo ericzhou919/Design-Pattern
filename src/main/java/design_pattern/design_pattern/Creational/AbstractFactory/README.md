@@ -4,7 +4,7 @@
 
 ## 例子   
 
-> 食物工廠根據各種主食及肉類進行不同的搭配  
+> 食物工廠根據各種主食及肉類進行不同的搭配。  
 
 |  | Beef |Pork|
 |-------|:-----:|:------:|
@@ -57,7 +57,7 @@ public class BeefFoodFactory implements FoodFactory {
 }
 ```  
 
-再來可以設計一個工廠，來使用不同的食物工廠。   
+再來設計一個工廠，來使用不同的食物工廠。   
 ```java
 public interface FoodFactory {
     Noodles createNoodles();
@@ -79,7 +79,10 @@ public static class FactoryMaker {
             }
         }
     }
+```  
 
+程式執行。 
+```java
 public class AbstractFactory 
 {
     private final static Food food = new Food();
