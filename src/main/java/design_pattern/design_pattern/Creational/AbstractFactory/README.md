@@ -60,20 +60,20 @@ public class BeefFoodFactory implements FoodFactory {
 再來設計一個工廠，來使用不同的食物工廠。   
 ```java
 public static class FactoryMaker {
-        public enum MeatType {
-            Beef, Pork
-        }
-        public static FoodFactory makeFactory(MeatType type) {
-            switch (type) {
-                case Beef:
-                    return new BeefFoodFactory();
-                case Pork:
-                    return new PorkFoodFactory();
-                default:
-                    throw new IllegalArgumentException("MeatType not supported.");
-            }
+    public enum MeatType {
+        Beef, Pork
+    }
+    public static FoodFactory makeFactory(MeatType type) {
+        switch (type) {
+            case Beef:
+                return new BeefFoodFactory();
+            case Pork:
+                return new PorkFoodFactory();
+            default:
+                throw new IllegalArgumentException("MeatType not supported.");
         }
     }
+}
 ```  
 
 程式執行：  
