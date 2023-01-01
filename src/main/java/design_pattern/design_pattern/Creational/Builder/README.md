@@ -21,6 +21,11 @@ public final class Character {
     this.hairColor = builder.haircolor;
     this.sex = builder.sex;
   }
+  @Override
+  public String toString() {
+    return "PlayerCharacter [haircolor=" + haircolor + ", name=" + name + ", profession=" + profession + ", sex=" + sex
+        + "]";
+  }
 }
 
 public enum Profession {
