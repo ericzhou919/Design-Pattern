@@ -81,7 +81,7 @@ public static class FactoryMaker {
     }
 ```  
 
-程式執行。 
+程式執行：  
 ```java
 public class AbstractFactory 
 {
