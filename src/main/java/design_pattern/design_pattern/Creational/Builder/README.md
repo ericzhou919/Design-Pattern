@@ -23,7 +23,7 @@ public final class Character {
   }
   @Override
   public String toString() {
-    return "PlayerCharacter [haircolor=" + haircolor + ", name=" + name + ", profession=" + profession + ", sex=" + sex
+    return "[haircolor=" + haircolor + ", name=" + name + ", profession=" + profession + ", sex=" + sex
         + "]";
   }
 }
@@ -96,5 +96,5 @@ System.out.println("This your character: " + pc.toString());
 
 輸出：  
 ```java
-This your character: PlayerCharacter [haircolor=black, name=Test, profession=warrior, sex=male]
+This your character:[haircolor=black, name=Test, profession=warrior, sex=male]
 ```
