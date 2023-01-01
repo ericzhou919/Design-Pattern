@@ -22,6 +22,36 @@ public final class Character {
     this.sex = builder.sex;
   }
 }
+
+public enum Profession {
+
+  WARRIOR, TANK, ARCHER, PRIEST;
+
+  @Override
+  public String toString() {
+    return name().toLowerCase();
+  }
+}
+
+public enum HairColor {
+
+  RED, BLUE, BLACK;
+
+  @Override
+  public String toString() {
+    return name().toLowerCase();
+  }
+}
+
+public enum Sex {
+
+  MALE, FEMALE;
+
+  @Override
+  public String toString() {
+    return name().toLowerCase();
+  }
+}
 ```  
 
 建立Builder。  
