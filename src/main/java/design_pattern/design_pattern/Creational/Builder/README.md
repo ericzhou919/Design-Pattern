@@ -24,7 +24,7 @@ public final class Character {
 }
 ```  
 
-定義可製造的硬幣種類。  
+建立Builder。  
 ```java
 public static class Builder {
 
@@ -59,7 +59,7 @@ public static class Builder {
 
 ```    
 
-程式執行。 
+程式執行：  
 ```java
 PlayerCharacter pc = new PlayerCharacter.Builder(Profession.WARRIOR, "Test").setHairColor(HairColor.BLACK).setSex(Sex.MALE).build();
 System.out.println("This your character: " + pc.toString());
