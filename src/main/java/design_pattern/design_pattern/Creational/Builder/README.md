@@ -96,5 +96,5 @@ System.out.println("This your character: " + pc.toString());
 
 輸出：  
 ```java
-This your character:[haircolor=black, name=Test, profession=warrior, sex=male]
+This your character: [haircolor=black, name=Test, profession=warrior, sex=male]
 ```
