@@ -49,7 +49,7 @@ public class CoinFactory {
 }
 ```  
 
-程式執行。 
+程式執行： 
 ```java
 CoinFactory cf = new CoinFactory();
 Coin coinTen = cf.getCoin(CoinType.TEN);
