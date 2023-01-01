@@ -79,7 +79,7 @@ public static class Builder {
       return new PlayerCharacter(this);
     }
 
-  }
+}
 
 ```    
 
