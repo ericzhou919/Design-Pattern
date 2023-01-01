@@ -55,6 +55,19 @@ public class BeefFoodFactory implements FoodFactory {
         return new BeefRice();
     }
 }
+
+public class PorkFoodFactory implements FoodFactory {
+
+    @Override
+    public Noodles createNoodles() {
+        return new PorkNoodles();
+    }
+
+    @Override
+    public Rice createRice() {
+        return new PorkRice();
+    }
+}
 ```  
 
 再來設計一個工廠，來使用不同的食物工廠。   
