@@ -24,9 +24,7 @@ public final class Character {
 }
 
 public enum Profession {
-
   WARRIOR, TANK, ARCHER, PRIEST;
-
   @Override
   public String toString() {
     return name().toLowerCase();
@@ -34,9 +32,7 @@ public enum Profession {
 }
 
 public enum HairColor {
-
   RED, BLUE, BLACK;
-
   @Override
   public String toString() {
     return name().toLowerCase();
@@ -44,9 +40,7 @@ public enum HairColor {
 }
 
 public enum Sex {
-
   MALE, FEMALE;
-
   @Override
   public String toString() {
     return name().toLowerCase();
