@@ -59,11 +59,6 @@ public class BeefFoodFactory implements FoodFactory {
 
 再來設計一個工廠，來使用不同的食物工廠。   
 ```java
-public interface FoodFactory {
-    Noodles createNoodles();
-    Rice createRice();
-}
-
 public static class FactoryMaker {
         public enum MeatType {
             Beef, Pork
