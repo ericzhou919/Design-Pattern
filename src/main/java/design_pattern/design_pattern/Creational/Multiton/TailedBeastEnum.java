@@ -9,5 +9,5 @@ public enum TailedBeastEnum {
     Saiken, // 六尾犀犬
     Chōmei, // 七尾重明
     UshiOni, // 八尾牛鬼
-    Kurama// 九尾牛鬼
+    Kurama// 九尾九喇嘛
 }

@@ -6,7 +6,7 @@ import design_pattern.design_pattern.Creational.ObjectPool.ObjectPoolPatterns;
 import design_pattern.design_pattern.Creational.Prototype.Prototype;
 import design_pattern.design_pattern.Creational.Singleton.Singleton;
 import design_pattern.design_pattern.Creational.AbstractFactory.AbstractFactory;
-import design_pattern.design_pattern.Creational.Builder.Builder;
+import design_pattern.design_pattern.Creational.Builder.BuilderPattern;
 import design_pattern.design_pattern.Creational.Multiton.*;
 import design_pattern.design_pattern.Structural.Adapter.*;
 import design_pattern.design_pattern.Behavioral.ChainOfResponsibility.*;
@@ -20,6 +20,6 @@ import design_pattern.design_pattern.Behavioral.Visitor.*;
 
 public class App {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Builder.UseBuilder();
+        ObjectPoolPatterns.UseObjectPool();
     }
 }

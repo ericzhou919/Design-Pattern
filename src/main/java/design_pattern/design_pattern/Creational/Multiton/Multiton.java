@@ -1,15 +1,9 @@
 package design_pattern.design_pattern.Creational.Multiton;
 
-/**
- * Hello world!
- *
- */
 public class Multiton 
 {
     public static void UseMultiton()
     {
-        System.out.println("UseMultiton");
-
         System.out.println("OneTail= " + TailedBeast.getInstance(TailedBeastName.Shukaku));
         System.out.println("TwoTail= " + TailedBeast.getInstance(TailedBeastName.Matatabi));
         System.out.println("ThreeTail= " + TailedBeast.getInstance(TailedBeastName.Isobu));

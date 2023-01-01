@@ -3,10 +3,6 @@ package design_pattern.design_pattern.Creational.Multiton;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Nazgul is a Multiton class. Nazgul instances can be queried using
- * {@link #getInstance} method.
- */
 public final class TailedBeast {
 
     private static final Map<TailedBeastName, TailedBeast> beasts;

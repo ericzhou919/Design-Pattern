@@ -2,15 +2,9 @@ package design_pattern.design_pattern.Creational.ObjectPool;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * Hello world!
- *
- */
 public class Giants {
     private static final AtomicInteger counter = new AtomicInteger(0);
-
     private final int id;
-
     public Giants() {
         id = counter.incrementAndGet();
         try {
@@ -19,11 +13,9 @@ public class Giants {
             e.printStackTrace();
         }
     }
-
     public int getId() {
         return id;
     }
-
     @Override
     public String toString() {
         return String.format("Giants id=%d", id);
