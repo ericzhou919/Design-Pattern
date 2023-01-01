@@ -8,6 +8,7 @@
 * [Factory](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Factory)
 * [Multiton](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Multiton)
 * [ObjectPool](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/ObjectPool)
+* [Prototype](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Prototype)
 * [Singleton](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Singleton)
 ## Structural Patterns 
 
