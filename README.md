@@ -6,6 +6,7 @@
 * [AbstractFactory](https://github.com/zhouchenyu000/practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/AbstractFactory)
 * [Builder](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Builder)
 * [Factory](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Factory)
+* [Singleton](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Singleton)
 ## Structural Patterns 
 
 ## Behavioral Patterns  
