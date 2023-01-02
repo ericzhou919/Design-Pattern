@@ -13,13 +13,22 @@ public class Users implements Cloneable{
         this.empList=list;
     }
 
-    public void loadData(){
+    public void initData(){
         empList.add("Test1");
         empList.add("Test2");
     }
 
     public List<String> getUsersList() {
         return empList;
+    }
+    
+    public void add(String s) {
+        empList.add(s);
+    }
+    
+    public void remove(String s) {
+        if (empList.contains(s)) 
+            empList.remove(s);
     }
 
     @Override
