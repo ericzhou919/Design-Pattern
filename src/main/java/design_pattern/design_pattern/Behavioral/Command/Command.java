@@ -1,17 +1,12 @@
 package design_pattern.design_pattern.Behavioral.Command;
 
-public class Command 
-{ 
-    public static void UseCommand() {
-        Stock stock = new Stock();
+public abstract class Command {
 
-        BuyStock buyStockOrder = new BuyStock(stock);
-        SellStock sellStockOrder = new SellStock(stock);
+    IPhone iphone;
 
-        Broker broker = new Broker();
-        broker.takeOrder(buyStockOrder);
-        broker.takeOrder(sellStockOrder);
-
-        broker.placeOrders();
+    public Command(IPhone iphone) {
+        this.iphone = iphone;
     }
+
+    public abstract void execute();
 }
