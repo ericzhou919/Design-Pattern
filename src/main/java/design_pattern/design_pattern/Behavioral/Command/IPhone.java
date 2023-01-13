@@ -16,5 +16,4 @@ public class IPhone {
    public void decreaseVolume() {
       System.out.println("The volume has been decreased");
    }
-
 }

@@ -20,6 +20,6 @@ import design_pattern.design_pattern.Behavioral.Visitor.*;
 
 public class App {
     public static void main(String[] args) throws CloneNotSupportedException {
-        CommandPattern.UseCommand();
+        IteratorPattern.UseIterator();
     }
 }

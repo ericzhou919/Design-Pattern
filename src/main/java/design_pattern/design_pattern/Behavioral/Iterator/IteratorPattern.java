@@ -1,8 +1,7 @@
 package design_pattern.design_pattern.Behavioral.Iterator;
 
-public class UseIterator {
+public class IteratorPattern {
     public static void UseIterator() {
-        System.out.println("UseIterator");
         BookShelf bookShelf = new BookShelf(4);
         bookShelf.appendBook(new Book("A Book"));
         bookShelf.appendBook(new Book("B Book"));
