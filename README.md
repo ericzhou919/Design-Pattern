@@ -10,11 +10,13 @@
 * [ObjectPool](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/ObjectPool)
 * [Prototype](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Prototype)
 * [Singleton](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Singleton)
-## Structural Patterns 
+## Structural Patterns  
+* [Bridge](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Bridge)
 ## Behavioral Patterns  
 * [ChainOfResponsibility](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/ChainOfResponsibility)
 * [Command](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Command)
 * [Iterator](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Iterator)
 * [Memento](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Memento)
 * [NullObject](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/NullObject)
+* [State](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/State)
 ## Concurrency Patterns
