@@ -11,6 +11,7 @@
 * [Prototype](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Prototype)
 * [Singleton](https://github.com/zhouchenyu000/Practice-design-pattern/tree/main/src/main/java/design_pattern/design_pattern/Creational/Singleton)
 ## Structural Patterns  
+* [Adapter](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Structural/Adapter)
 * [Bridge](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Structural/Bridge)
 ## Behavioral Patterns  
 * [ChainOfResponsibility](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/ChainOfResponsibility)
