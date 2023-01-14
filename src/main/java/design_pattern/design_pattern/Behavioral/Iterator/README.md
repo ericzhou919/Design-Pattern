@@ -14,9 +14,9 @@ public interface Aggregate {
 }
 
 public interface Iterator {
-    //有沒有下一個元素
+
     public abstract boolean hasNext();
-    //下一個元素
+
     public abstract Object next();
 }
 ```  
