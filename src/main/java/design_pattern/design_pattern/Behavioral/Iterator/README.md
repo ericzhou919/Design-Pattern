@@ -1,124 +1,107 @@
 ## 定義
 
-。
+提供一種在不暴露其底層表示的情況下，依序訪問聚集物件元素的方法。  
 
 ## 例子   
 
-> 。  
+> 書櫃的書照著字母順序排列，依序讀取全部的書。  
   
 ## 程式碼範例  
-建立IPhone相關操作。
+創建Aggregate和Iterator介面。
 ```java
-public class IPhone {
-   public void turnOn() {
-      System.out.println("IPhone is on");
-   }
+public interface Aggregate {
+    public abstract Iterator iterator();
+}
 
-   public void turnOff() {
-      System.out.println("IPhone is off");
-   }
-
-   public void increaseVolume() {
-      System.out.println("The volume has been increased");
-   }
-
-   public void decreaseVolume() {
-      System.out.println("The volume has been decreased");
-   }
+public interface Iterator {
+    //有沒有下一個元素
+    public abstract boolean hasNext();
+    //下一個元素
+    public abstract Object next();
 }
 ```  
 
-建立抽象介面Command。  
+創建Aggregate和Iterator介面。
 ```java
-public abstract class Command {
-    IPhone iphone;
-    public Command(IPhone iphone) {
-        this.iphone = iphone;
-    }
-    public abstract void execute();
-}
-```   
+public class Book {
+    private String name = "";
 
-實作相關操作。  
-```java
-public class TurnOn extends Command {
-   public TurnOn(IPhone iphone) {
-      super(iphone);
-   }
-
-   @Override
-   public void execute() {
-      iphone.turnOn();
-   }
-}
-
-public class TurnOff extends Command {
-   public TurnOff(IPhone iphone) {
-      super(iphone);
-   }
-
-   @Override
-   public void execute() {
-      iphone.turnOff();
-   }
-}
-
-public class IncreaseVolume extends Command {
-   public IncreaseVolume(IPhone iphone) {
-      super(iphone);
-   }
-
-   @Override
-   public void execute() {
-      iphone.increaseVolume();
-   }
-}
-
-public class DecreaseVolume extends Command {
-   public DecreaseVolume(IPhone iphone) {
-      super(iphone);
-   }
-
-   @Override
-   public void execute() {
-      iphone.decreaseVolume();
-   }
-}
-```  
-
-建立Invoker。
-```java
-public class Invoker {
-    private List<Command> commandList = new ArrayList<>();
-
-    public void addCommand(Command command) {
-        commandList.add(command);
+    public Book(String name) {
+        this.name = name;
     }
 
-    public void execute() {
-        for (Command command : commandList) {
-            command.execute();
+    public String getName() {
+        return name;
+    }
+}
+
+public class BookShelf implements Aggregate {
+    private Book[] books;
+    private int last = 0;
+
+    public BookShelf(int maxsize) {
+        this.books = new Book[maxsize];
+    }
+
+    public Book getBookAt(int index) {
+        return books[index];
+    }
+
+    public void appendBook(Book book) {
+        this.books[last] = book;
+        last++;
+    }
+
+    public int getLength() {
+        return last;
+    }
+
+    public Iterator iterator() {
+        return new BookShelfIterator(this);
+    }
+}
+
+public class BookShelfIterator implements Iterator {
+    private BookShelf bookShelf;
+    private int index;
+    public BookShelfIterator(BookShelf bookShelf) {
+        this.bookShelf = bookShelf;
+        this.index = 0;
+    }
+    public boolean hasNext() {
+        if (index < bookShelf.getLength()) {
+            return true;
+        } else {
+            return false;
         }
     }
+    public Object next() {
+        Book book = bookShelf.getBookAt(index);
+        index++;
+        return book;
+    }
 }
 ```  
+
 程式執行：  
 ```java
-IPhone i = new IPhone();
-Invoker invoker = new Invoker();
+BookShelf bookShelf = new BookShelf(4);
+bookShelf.appendBook(new Book("A Book"));
+bookShelf.appendBook(new Book("B Book"));
+bookShelf.appendBook(new Book("C Book"));
+bookShelf.appendBook(new Book("D Book"));
 
-invoker.addCommand(new TurnOn(i));
-invoker.addCommand(new IncreaseVolume(i));
-invoker.addCommand(new DecreaseVolume(i));
-invoker.addCommand(new TurnOff(i));
-
-invoker.execute();
+Iterator it = bookShelf.iterator();
+while (it.hasNext()) {
+    Book book = (Book) it.next();
+    System.out.println("" + book.getName());
+}
 ```  
 
 輸出：  
 ```java
-IPhone is on
-The volume has been increased
-The volume has been decreased
-IPhone is off
+A Book
+B Book
+C Book
+D Book
 ```
