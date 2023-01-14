@@ -21,7 +21,7 @@ public interface Iterator {
 }
 ```  
 
-創建Aggregate和Iterator介面。
+創建Book的Aggregate和Iterator。
 ```java
 public class Book {
     private String name = "";
