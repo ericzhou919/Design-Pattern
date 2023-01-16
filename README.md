@@ -24,3 +24,6 @@
 * [NullObject](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/NullObject)
 * [State](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/State)
 ## Concurrency Patterns
+* [ActiveObject](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/ActiveObject)
+* [Balking](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/Balking)
+* [DoubleCheckedLocking](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/DoubleCheckedLocking)
