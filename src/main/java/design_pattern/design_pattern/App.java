@@ -17,9 +17,11 @@ import design_pattern.design_pattern.Behavioral.Strategy.*;
 import design_pattern.design_pattern.Behavioral.TemplateMethod.*;
 import design_pattern.design_pattern.Behavioral.Command.*;
 import design_pattern.design_pattern.Behavioral.Visitor.*;
+import design_pattern.design_pattern.Structural.Proxy.*;
+import design_pattern.design_pattern.Concurrency.ActiveObject.*;
 
 public class App {
     public static void main(String[] args) throws CloneNotSupportedException {
-        IteratorPattern.UseIterator();
+        Proxy.UseProxy();
     }
 }
