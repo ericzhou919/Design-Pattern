@@ -14,7 +14,7 @@
 > 此範例示範保護代理，代理首先檢查您要連接的主機，如果它不是受限制網站列表的一部分，那麼它將連接到真正的網路。  
   
 ## 程式碼範例  
-。
+創建Internet介面和實作RealInternet。
 ```java
 public interface Internet {
     public void connectTo(String host) throws Exception;
@@ -28,9 +28,9 @@ public class RealInternet implements Internet {
 }
 ```   
 
-。
+創建ProxyInternet。  
 ```java
-public class ProxyInternet implements Internet {
+public class。ProxyInternet implements Internet {
     private Internet internet = new RealInternet();
     private static List<String> bannedSites;
 
