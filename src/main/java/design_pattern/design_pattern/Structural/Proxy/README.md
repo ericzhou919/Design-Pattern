@@ -30,7 +30,7 @@ public class RealInternet implements Internet {
 
 創建ProxyInternet。  
 ```java
-public class。ProxyInternet implements Internet {
+public class ProxyInternet implements Internet {
     private Internet internet = new RealInternet();
     private static List<String> bannedSites;
 
