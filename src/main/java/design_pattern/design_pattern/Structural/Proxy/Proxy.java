@@ -12,5 +12,4 @@ public class Proxy
             System.out.println(e.getMessage());
         }
     }
-
 }

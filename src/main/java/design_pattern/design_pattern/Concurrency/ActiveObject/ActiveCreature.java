@@ -2,7 +2,6 @@ package design_pattern.design_pattern.Concurrency.ActiveObject;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.PriorityBlockingQueue;
 
 public abstract class ActiveCreature {
 

@@ -10,9 +10,6 @@ public class ProxyInternet implements Internet {
     static {
         bannedSites = new ArrayList<String>();
         bannedSites.add("abc.com");
-        bannedSites.add("def.com");
-        bannedSites.add("ijk.com");
-        bannedSites.add("lnm.com");
     }
 
     @Override
@@ -23,5 +20,4 @@ public class ProxyInternet implements Internet {
 
         internet.connectTo(host);
     }
-
 }
