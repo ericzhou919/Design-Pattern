@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
-public class ThreadPoolPattern 
+public class ThreadPool
 {
     public static void UseThreadPool() throws InterruptedException
     {
@@ -18,8 +18,6 @@ public class ThreadPoolPattern
         while (!executor.isTerminated()) {
         }
         System.out.println("Finished all threads");
- 
-        
     }
 
 }

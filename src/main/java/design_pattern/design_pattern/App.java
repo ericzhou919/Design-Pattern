@@ -20,9 +20,10 @@ import design_pattern.design_pattern.Behavioral.Visitor.*;
 import design_pattern.design_pattern.Structural.Proxy.*;
 import design_pattern.design_pattern.Concurrency.ActiveObject.*;
 import design_pattern.design_pattern.Concurrency.ThreadPool.*;
+import design_pattern.design_pattern.Concurrency.ReadWriteLock.*;
 
 public class App {
     public static void main(String[] args) throws CloneNotSupportedException, InterruptedException {
-        ThreadPoolPattern.UseThreadPool();
+        ReadWriteLockPattern.UseReadWriteLock();
     }
 }

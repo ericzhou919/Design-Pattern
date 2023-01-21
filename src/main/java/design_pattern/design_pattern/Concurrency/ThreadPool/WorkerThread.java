@@ -1,11 +1,7 @@
 package design_pattern.design_pattern.Concurrency.ThreadPool;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.LinkedBlockingQueue;
-
 public class WorkerThread implements Runnable {
-
+    long startTime = System.currentTimeMillis();
     private String command;
 
     public WorkerThread(String s) {
@@ -21,7 +17,11 @@ public class WorkerThread implements Runnable {
 
     private void processCommand() {
         try {
-            Thread.sleep(5000);
+            int r = (int) (Math.random() * 6) + 2;
+            Thread.sleep(r * 1000);
+            long endTime = System.currentTimeMillis();
+            long duration = endTime - startTime;
+            System.out.println("After "+ duration/1000+" seconds.");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

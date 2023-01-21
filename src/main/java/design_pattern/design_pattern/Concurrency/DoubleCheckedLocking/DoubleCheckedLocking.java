@@ -1,4 +1,4 @@
-package design_pattern.design_pattern.Concurrency;
+package design_pattern.design_pattern.Concurrency.DoubleCheckedLocking;
 
 /**
  * Hello world!
