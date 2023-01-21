@@ -19,9 +19,10 @@ import design_pattern.design_pattern.Behavioral.Command.*;
 import design_pattern.design_pattern.Behavioral.Visitor.*;
 import design_pattern.design_pattern.Structural.Proxy.*;
 import design_pattern.design_pattern.Concurrency.ActiveObject.*;
+import design_pattern.design_pattern.Concurrency.ThreadPool.*;
 
 public class App {
-    public static void main(String[] args) throws CloneNotSupportedException {
-        Proxy.UseProxy();
+    public static void main(String[] args) throws CloneNotSupportedException, InterruptedException {
+        ThreadPoolPattern.UseThreadPool();
     }
 }
