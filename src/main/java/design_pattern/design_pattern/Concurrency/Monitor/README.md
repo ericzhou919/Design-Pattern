@@ -65,23 +65,23 @@ visitor#4 is waiting for the visit
 visitor#1 is waiting for the visit
 visitor#3 is waiting for the visit
 ```
-一秒後：  
+After 1 seconds：  
 ```java
 visitor#2 is visited the house
 ```
-兩秒後：  
+After 2 seconds：  
 ```java
 visitor#3 is visited the house
 ```
-三秒後：  
+After 3 seconds：  
 ```java
 visitor#1 is visited the house
 ```
-四秒後：  
+After 4 seconds：  
 ```java
 visitor#4 is visited the house
 ```
-五秒後：  
+After 5 seconds：  
 ```java
 visitor#5 is visited the house
 ```
