@@ -17,7 +17,4 @@ public class DoubleCheckedLockingSingleton{
         }
         return instance;
     }
-
-  
-    
 }
