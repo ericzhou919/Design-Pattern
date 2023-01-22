@@ -24,6 +24,9 @@
 * [Memento](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Memento)
 * [NullObject](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/NullObject)
 * [State](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/State)
+* [Strategy](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Strategy)
+* [TemplateMethod](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/TemplateMethod)
+* [Visitor](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Visitor)
 ## Concurrency Patterns
 * [ActiveObject](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/ActiveObject)
 * [Balking](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/Balking)
