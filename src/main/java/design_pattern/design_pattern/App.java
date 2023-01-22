@@ -21,9 +21,10 @@ import design_pattern.design_pattern.Structural.Proxy.*;
 import design_pattern.design_pattern.Concurrency.ActiveObject.*;
 import design_pattern.design_pattern.Concurrency.ThreadPool.*;
 import design_pattern.design_pattern.Concurrency.ReadWriteLock.*;
+import design_pattern.design_pattern.Concurrency.GuardedSuspension.*;
 
 public class App {
     public static void main(String[] args) throws CloneNotSupportedException, InterruptedException {
-        ReadWriteLockPattern.UseReadWriteLock();
+        GuardedSuspension.UseGuardedSuspension();
     }
 }
