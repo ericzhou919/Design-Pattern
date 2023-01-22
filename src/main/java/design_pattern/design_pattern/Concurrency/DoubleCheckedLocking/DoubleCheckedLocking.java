@@ -1,14 +1,12 @@
 package design_pattern.design_pattern.Concurrency.DoubleCheckedLocking;
 
-/**
- * Hello world!
- *
- */
 public class DoubleCheckedLocking 
 {
-    public static void UseDoubleCheckedLocking()
+    public static void UseDoubleCheckedLocking() throws InterruptedException
     {
-        System.out.println("UseFactory");
+        DoubleCheckedLockingSingleton singleton1 = DoubleCheckedLockingSingleton.getInstance();
+        DoubleCheckedLockingSingleton singleton2 = DoubleCheckedLockingSingleton.getInstance();
+        System.out.println(singleton1 == singleton2); 
     }
 
 }

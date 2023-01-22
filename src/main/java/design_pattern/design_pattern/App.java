@@ -22,9 +22,10 @@ import design_pattern.design_pattern.Concurrency.ActiveObject.*;
 import design_pattern.design_pattern.Concurrency.ThreadPool.*;
 import design_pattern.design_pattern.Concurrency.ReadWriteLock.*;
 import design_pattern.design_pattern.Concurrency.GuardedSuspension.*;
+import design_pattern.design_pattern.Concurrency.DoubleCheckedLocking.*;
 
 public class App {
     public static void main(String[] args) throws CloneNotSupportedException, InterruptedException {
-        GuardedSuspension.UseGuardedSuspension();
+        DoubleCheckedLocking.UseDoubleCheckedLocking();
     }
 }
