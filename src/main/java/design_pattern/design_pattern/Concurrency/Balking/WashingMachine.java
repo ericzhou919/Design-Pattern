@@ -7,15 +7,12 @@ public class WashingMachine {
     private final DelayProvider delayProvider;
     private WashingMachineState washingMachineState;
 
-    /**
-     * Creates a new instance of WashingMachine.
-     */
     public WashingMachine() {
         this((interval, timeUnit, task) -> {
             try {
                 Thread.sleep(timeUnit.toMillis(interval));
             } catch (InterruptedException ie) {
-                //LOGGER.error("", ie);
+                System.out.println(ie);
                 Thread.currentThread().interrupt();
             }
             task.run();
@@ -31,30 +28,25 @@ public class WashingMachine {
         return washingMachineState;
     }
 
-    /**
-     * Method responsible for washing if the object is in appropriate state.
-     */
     public void wash() {
         synchronized (this) {
             WashingMachineState machineState = getWashingMachineState();
-            //LOGGER.info("{}: Actual machine state: {}", Thread.currentThread().getName(), machineState);
+            System.out.println(Thread.currentThread().getName() + ": Actual machine state: " + machineState);
             if (this.washingMachineState == WashingMachineState.WASHING) {
-                //LOGGER.error("Cannot wash if the machine has been already washing!");
+                System.out.println("Cannot wash if the machine has been already washing!");
+                System.out.println("");
                 return;
             }
             this.washingMachineState = WashingMachineState.WASHING;
         }
-        //LOGGER.info("{}: Doing the washing", Thread.currentThread().getName());
+        System.out.println(Thread.currentThread().getName() + ": Doing the washing");
+        System.out.println("");
 
         this.delayProvider.executeAfterDelay(50, TimeUnit.MILLISECONDS, this::endOfWashing);
     }
 
-    /**
-     * Method responsible of ending the washing by changing machine state.
-     */
     public synchronized void endOfWashing() {
         washingMachineState = WashingMachineState.ENABLED;
-        //LOGGER.info("{}: Washing completed.", Thread.currentThread().getId());
+        System.out.println(Thread.currentThread().getName() + ": Washing completed.");
     }
-
 }

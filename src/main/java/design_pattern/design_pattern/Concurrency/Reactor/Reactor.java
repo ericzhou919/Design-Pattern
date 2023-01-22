@@ -1,9 +1,5 @@
-package design_pattern.design_pattern.Concurrency;
+package design_pattern.design_pattern.Concurrency.Reactor;
 
-/**
- * Hello world!
- *
- */
 public class Reactor 
 {
     public static void UseReactor()
