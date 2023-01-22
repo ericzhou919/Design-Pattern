@@ -28,6 +28,7 @@
 * [ActiveObject](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/ActiveObject)
 * [Balking](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/Balking)
 * [DoubleCheckedLocking](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/DoubleCheckedLocking)
+* [GuardedSuspension](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/GuardedSuspension)
 * [Monitor](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/Monitor)
 * [ReadWriteLock](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/ReadWriteLock)
 * [ThreadPool](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Concurrency/ThreadPool)
