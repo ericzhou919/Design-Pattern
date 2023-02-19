@@ -1,10 +1,10 @@
-## 定義
+## Definition
 
 用於防止對像在處於不完整或不適當狀態時，阻止或拒絕請求。
 
-## 例子   
+## Example
 
-> 洗衣機的按鈕，正常情況下會啟動洗衣機，但當洗衣機處於運轉中時，按鈕無效。  
+> Washing Machine button, starting the machine under normal conditions, but when the machine is running, button invalid.  
   
 ## 程式碼範例  
 建立洗衣機。
