@@ -44,7 +44,7 @@ public class ActiveObject {
 
 ```  
  
-程式執行：  
+Program execution：  
 ```java
 ActiveObject obj = new ActiveObject();
 Thread t1 = new Thread(() -> {
@@ -62,7 +62,7 @@ t2.start();
 t3.start();
 ```  
 
-輸出：  
+Program output：  
 ```java
 Thread[Thread-1,5,main]
 Thread[Thread-2,5,main]
