@@ -1,32 +1,40 @@
 package design_pattern.design_pattern.Concurrency.ActiveObject;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.PriorityBlockingQueue;
 
-public class ActiveObject implements Runnable {
+public class ActiveObject {
+  class Task implements Comparable<Task> {
+    // smaller number means higher priority
+    int priority;
+    String name;
 
-    private static final int NUM_CREATURES = 3;
-    public static void UseActiveObject() {
-        ActiveObject a = new ActiveObject();
-        a.run();
+    Task(String name, int priority) {
+      this.name = name;
+      this.priority = priority;
     }
 
-    @Override
-    public void run() {
-        List<ActiveCreature> creatures = new ArrayList<>();
-        try {
-            for (int i = 0; i < NUM_CREATURES; i++) {
-                creatures.add(new Orc(Orc.class.getSimpleName() + i));
-                creatures.get(i).eat();
-                creatures.get(i).roam();
-            }
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-            Thread.currentThread().interrupt();
+    public int compareTo(Task other) {
+      return Integer.compare(this.priority, other.priority);
+    }
+  }
+
+  private PriorityBlockingQueue<Task> dispatchQueue = new PriorityBlockingQueue<>();
+
+  public ActiveObject() {
+    new Thread(() -> {
+      while (true) {
+          try {
+            Task task = dispatchQueue.take();
+            System.out.println("Executing task " + task.name);
+          } catch (InterruptedException e) {
+            break;
+          }
         }
-    }
+    }).start();
+  }
+
+  public void doTask(String name, int priority) {
+    System.out.println(Thread.currentThread().toString());
+    dispatchQueue.put(new Task(name, priority));
+  }
 }

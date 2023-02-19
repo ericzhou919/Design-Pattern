@@ -9,6 +9,9 @@ import design_pattern.design_pattern.Creational.AbstractFactory.AbstractFactory;
 import design_pattern.design_pattern.Creational.Builder.BuilderPattern;
 import design_pattern.design_pattern.Creational.Multiton.*;
 import design_pattern.design_pattern.Structural.Adapter.*;
+
+import java.io.IOException;
+
 import design_pattern.design_pattern.Behavioral.ChainOfResponsibility.*;
 import design_pattern.design_pattern.Behavioral.Iterator.*;
 import design_pattern.design_pattern.Behavioral.Observer.*;
@@ -23,9 +26,10 @@ import design_pattern.design_pattern.Concurrency.ThreadPool.*;
 import design_pattern.design_pattern.Concurrency.ReadWriteLock.*;
 import design_pattern.design_pattern.Concurrency.GuardedSuspension.*;
 import design_pattern.design_pattern.Concurrency.DoubleCheckedLocking.*;
+import design_pattern.design_pattern.Concurrency.Reactor.*;
 
 public class App {
-    public static void main(String[] args) throws CloneNotSupportedException, InterruptedException {
-        DoubleCheckedLocking.UseDoubleCheckedLocking();
+    public static void main(String[] args) throws CloneNotSupportedException, InterruptedException, IOException {
+        ActiveObjectPattern.UseActiveObject();
     }
 }
