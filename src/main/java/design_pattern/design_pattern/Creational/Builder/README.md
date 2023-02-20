@@ -53,7 +53,7 @@ public enum Sex {
 }
 ```  
 
-Create Builder。  
+Create Builder.  
 ```java
 public static class Builder {
 
