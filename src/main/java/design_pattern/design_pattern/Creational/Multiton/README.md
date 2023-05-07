@@ -1,24 +1,26 @@
-## 定義
+## Definition
 
-確保一個類別只有有限數量的實例，並提供對它們的全局訪問點。
+Ensure a class has a limited number of instances and provides a global access point to them.
 
-## 例子   
+## Example
 
-> 火影忍者裡的尾獸總共有九隻，從一尾到九尾。  
-  
-## 程式碼範例  
-設定尾獸。
+> In Naruto (Japanese comics), there are a total of nine tailed beasts, from the one-tailed to the nine-tailed fox.
+
+## Programmatic Example
+
+Setting up a Tailed Beast Name.
+
 ```java
 public enum TailedBeastName {
-    Shukaku, //一尾守鶴
-    Matatabi, //二尾又旅
-    Isobu, // 三尾磯撫
-    SonGokū, // 四尾孫悟空
-    Kokuō, // 五尾穆王
-    Saiken, // 六尾犀犬
-    Chōmei, // 七尾重明
-    UshiOni, // 八尾牛鬼
-    Kurama// 九尾九喇嘛
+    Shukaku,
+    Matatabi,
+    Isobu,
+    SonGokū,
+    Kokuō,
+    Saiken,
+    Chōmei,
+    UshiOni,
+    Kurama
 }
 
 public final class TailedBeast {
@@ -49,9 +51,10 @@ public final class TailedBeast {
         return name;
     }
 }
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 System.out.println("OneTail= " + TailedBeast.getInstance(TailedBeastName.Shukaku));
 System.out.println("TwoTail= " + TailedBeast.getInstance(TailedBeastName.Matatabi));
@@ -72,9 +75,10 @@ System.out.println("SixTail= " + TailedBeastEnum.Saiken);
 System.out.println("SevenTail= " + TailedBeastEnum.Chōmei);
 System.out.println("EightTail= " + TailedBeastEnum.UshiOni);
 System.out.println("NineTail= " + TailedBeastEnum.Kurama);
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 OneTail= design_pattern.design_pattern.Creational.Multiton.TailedBeast@42a57993
 TwoTail= design_pattern.design_pattern.Creational.Multiton.TailedBeast@75b84c92

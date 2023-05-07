@@ -1,9 +1,11 @@
-## 定義
+## Definition
 
 一種執行緒使用模式，執行緒池維護著多個執行緒，等待著監督管理者分配可並行執行的任務，這避免了在處理短時間任務時建立與銷毀執行緒的代價。
-  
-## 程式碼範例  
-創建WorkerThread。
+
+## Programmatic Example
+
+創建 WorkerThread。
+
 ```java
 public class WorkerThread implements Runnable {
     long startTime = System.currentTimeMillis();
@@ -37,9 +39,10 @@ public class WorkerThread implements Runnable {
         return this.command;
     }
 }
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(5);
 for (int i = 0; i < 10; i++) {
@@ -50,9 +53,10 @@ executor.shutdown();
 while (!executor.isTerminated()) {
 }
 System.out.println("Finished all threads");
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 pool-1-thread-1 Start. Command = 0
 pool-1-thread-2 Start. Command = 1
@@ -60,13 +64,17 @@ pool-1-thread-3 Start. Command = 2
 pool-1-thread-4 Start. Command = 3
 pool-1-thread-5 Start. Command = 4
 ```
-After 1 seconds：  
+
+After 1 seconds：
+
 ```java
 After 1 seconds.
 pool-1-thread-4 End.
 pool-1-thread-4 Start. Command = 5
 ```
-After 2 seconds：  
+
+After 2 seconds：
+
 ```java
 After 2 seconds.
 pool-1-thread-1 End.
@@ -75,13 +83,17 @@ After 2 seconds.
 pool-1-thread-2 End.
 pool-1-thread-2 Start. Command = 7
 ```
-After 3 seconds：  
+
+After 3 seconds：
+
 ```java
 After 3 seconds.
 pool-1-thread-2 End.
 pool-1-thread-2 Start. Command = 8
 ```
-After 4 seconds：  
+
+After 4 seconds：
+
 ```java
 After 4 seconds.
 pool-1-thread-3 End.
@@ -93,12 +105,16 @@ pool-1-thread-4 End.
 After 4 seconds.
 pool-1-thread-3 End.
 ```
-After 5 seconds：  
+
+After 5 seconds：
+
 ```java
 After 5 seconds.
 pool-1-thread-2 End.
 ```
-After 6 seconds：  
+
+After 6 seconds：
+
 ```java
 After 6 seconds.
 pool-1-thread-1 End.

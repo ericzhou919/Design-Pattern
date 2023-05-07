@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
 描述一組對象，它們被視為同一類型對象的單個實例。組合的目的是將對象“組合”成樹結構以表示部分整體層次結構。實施複合模式可以使客戶統一處理各個對象和合成。
 
-## 例子   
+## Example
 
-> 公司部門由高至低分別有CEO、各部門主管、各部門員工，我們將創建各層級人員並依序print。  
-  
-## 程式碼範例  
-創建Employee。
+> 公司部門由高至低分別有 CEO、各部門主管、各部門員工，我們將創建各層級人員並依序 print。
+
+## Programmatic Example
+
+創建 Employee。
+
 ```java
 public class Employee {
    private String name;
@@ -47,9 +49,10 @@ public class Employee {
       return ("Employee :[ Name : " + name + ", dept : " + dept + ", salary :" + salary + " ]");
    }
 }
-```   
+```
 
-程式執行：  
+Program execution：
+
 ```java
 Employee CEO = new Employee("BOSS", "CEO", 30000);
 
@@ -74,9 +77,10 @@ headMarketing.add(clerk2);
 
 System.out.println(CEO);
 CEO.traversel(CEO);
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 Employee :[ Name : BOSS, dept : CEO, salary :30000 ]
 Employee :[ Name : Head S, dept : Head Sales, salary :20000 ]

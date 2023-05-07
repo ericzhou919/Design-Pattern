@@ -1,9 +1,11 @@
-## 定義
+## Definition
 
 用於保護共享資源的讀寫訪問。讀寫鎖允許多個讀取者同時存取共享資源，但當有一個寫入者在寫入時，其他的讀取者和寫入者都必須等待。這樣可以避免在寫入時發生共享資源的不一致性。
-  
-## 程式碼範例  
-創建Reader。
+
+## Programmatic Example
+
+創建 Reader。
+
 ```java
 public class Reader implements Runnable {
 
@@ -44,9 +46,10 @@ public class Reader implements Runnable {
         System.out.println(name+" finish after reading "+ readingTime+"ms");
     }
 }
-```  
+```
 
-創建Writer。
+創建 Writer。
+
 ```java
 public class Writer implements Runnable {
 
@@ -87,9 +90,10 @@ public class Writer implements Runnable {
         System.out.println(name+" finish after reading "+ readingTime+"ms");
     }
 }
-```  
+```
 
-創建ReaderWriterLock。
+創建 ReaderWriterLock。
+
 ```java
 public class ReaderWriterLock implements ReadWriteLock {
 
@@ -228,9 +232,10 @@ public class ReaderWriterLock implements ReadWriteLock {
 
 }
 
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 ExecutorService executeService = Executors.newFixedThreadPool(10);
 ReaderWriterLock lock = new ReaderWriterLock();
@@ -272,9 +277,10 @@ try {
     //LOGGER.error("Error waiting for ExecutorService shutdown", e);
     Thread.currentThread().interrupt();
 }
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 Writer 0 begin
 Writers added...

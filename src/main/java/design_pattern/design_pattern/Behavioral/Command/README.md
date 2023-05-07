@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-將請求封裝為物件，使你藉由不同的請求(佇列或日誌請求)，對客戶端請求參數化，並支援可取消的操作。
+Encapsulate requests into objects to parameterize clients with different types of requests (queue or log requests), and support cancellable operations.
 
-## 例子   
+## Example
 
-> 手機可以進行開機關機、提高或降低音量等操作。  
-  
-## 程式碼範例  
-建立IPhone相關操作。
+> A mobile phone can perform operations such as power on/off and adjusting the volume up or down.
+
+## Programmatic Example
+
+Create iPhone-related operations.
+
 ```java
 public class IPhone {
    public void turnOn() {
@@ -26,9 +28,10 @@ public class IPhone {
       System.out.println("The volume has been decreased");
    }
 }
-```  
+```
 
-建立抽象介面Command。  
+Create an abstract interface "Command".
+
 ```java
 public abstract class Command {
     IPhone iphone;
@@ -37,9 +40,10 @@ public abstract class Command {
     }
     public abstract void execute();
 }
-```   
+```
 
-實作相關操作。  
+Implement related operations.
+
 ```java
 public class TurnOn extends Command {
    public TurnOn(IPhone iphone) {
@@ -84,9 +88,10 @@ public class DecreaseVolume extends Command {
       iphone.decreaseVolume();
    }
 }
-```  
+```
 
-建立Invoker。
+Create Invoker。
+
 ```java
 public class Invoker {
     private List<Command> commandList = new ArrayList<>();
@@ -101,8 +106,10 @@ public class Invoker {
         }
     }
 }
-```  
-程式執行：  
+```
+
+Program execution：
+
 ```java
 IPhone i = new IPhone();
 Invoker invoker = new Invoker();
@@ -113,9 +120,10 @@ invoker.addCommand(new DecreaseVolume(i));
 invoker.addCommand(new TurnOff(i));
 
 invoker.execute();
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 IPhone is on
 The volume has been increased

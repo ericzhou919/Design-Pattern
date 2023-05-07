@@ -1,18 +1,20 @@
-## 定義
+## Definition
 
-提供一個建立一系列相關或互相依賴物件的介面，而無需指定它們具體的類別。
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
 
-## 例子   
+## Example
 
-> 食物工廠根據各種主食及肉類進行不同的搭配。  
+> The food factory creates different combinations of food based on various types of staple foods and meats.
 
-|  | Beef |Pork|
-|-------|:-----:|:------:|
-| Noodles   |  BeefNoodles  |PorkNoodles|
-| Rice   |  BeefRice  |   PorkRice |  
-  
-## 程式碼範例  
-首先，建立食物的介面與實現。
+|         |    Beef     |    Pork     |
+| ------- | :---------: | :---------: |
+| Noodles | BeefNoodles | PorkNoodles |
+| Rice    |  BeefRice   |  PorkRice   |
+
+## Programmatic Example
+
+First, create the interface and implementation for the food.
+
 ```java
 public interface Rice {
     void getDescription();
@@ -34,9 +36,10 @@ public class BeefNoodles implements Noodles {
         System.out.println("This is the Beef Noodles!");
     }
 }
-```  
+```
 
-然後建立食物工廠的介面與實現。  
+Then, create the interface and implementation for the food factory.
+
 ```java
 public interface FoodFactory {
     Noodles createNoodles();
@@ -68,9 +71,10 @@ public class PorkFoodFactory implements FoodFactory {
         return new PorkRice();
     }
 }
-```  
+```
 
-再來設計一個工廠，來使用不同的食物工廠。   
+Next, design a factory that uses different food factories.
+
 ```java
 public static class FactoryMaker {
     public enum MeatType {
@@ -87,9 +91,10 @@ public static class FactoryMaker {
         }
     }
 }
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 private final static Food food = new Food();
 public static void UseAbstractFactory()
@@ -108,9 +113,10 @@ public static void createFood(final Food.FactoryMaker.MeatType type) {
     food.setNoodles(foodFactory.createNoodles());
     food.setRice(foodFactory.createRice());
 }
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 This is the Beef Noodles!
 This is the Beef Rice!

@@ -1,22 +1,27 @@
-## 定義
+## Definition
 
 。
 
-## 例子   
+## Example
 
-> 。  
-  
-## 程式碼範例  
+> 。
+
+## Programmatic Example
+
 。
+
 ```java
 
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
+
 ```

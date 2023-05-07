@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
 允許一個對像在其內部狀態改變時改變它的行為，該對像會更改其類別。
 
-## 例子   
+## Example
 
-> 一隻長毛象，平時很溫和，當受到威脅時，會變得憤怒。  
-  
-## 程式碼範例  
-建立State介面及實作。
+> 一隻長毛象，平時很溫和，當受到威脅時，會變得憤怒。
+
+## Programmatic Example
+
+建立 State 介面及實作。
+
 ```java
 public interface State {
 
@@ -53,9 +55,10 @@ public class AngryState implements State {
     System.out.println(mammoth + " gets angry!");
   }
 }
-```  
+```
 
-建立Mammoth。
+建立 Mammoth。
+
 ```java
 public class Mammoth {
 
@@ -87,8 +90,10 @@ public class Mammoth {
     this.state.observe();
   }
 }
-```  
-程式執行：  
+```
+
+Program execution：
+
 ```java
 Mammoth mammoth = new Mammoth();
 mammoth.observe();
@@ -96,9 +101,10 @@ mammoth.timePasses();
 mammoth.observe();
 mammoth.timePasses();
 mammoth.observe();
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 The mammoth is calm and peaceful.
 The mammoth gets angry!

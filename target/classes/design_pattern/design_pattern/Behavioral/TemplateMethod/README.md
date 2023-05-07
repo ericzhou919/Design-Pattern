@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-定義了在某些演算法下的程式骨架，把某些行為或定義推遲到子類別實現，允許子類別在不改變算法結構的情況下重新定義算法的某些步驟。
+This refers to the Template Method pattern which defines the skeleton of an algorithm in which certain behaviors or definitions are deferred to subclasses. This allows subclasses to redefine certain steps of the algorithm without changing its structure.
 
-## 例子   
+## Example
 
->蓋房子有相同的步驟，根據不同的房子種類有不同的方法實現。  
-  
-## 程式碼範例  
-創建模板方法和具體實現。
+> Building a house involves the same steps, but there are different methods to implement based on the type of house.
+
+## Programmatic Example
+
+Create a template method and implementation.
+
 ```java
 public abstract class HouseTemplate {
     public final void buildHouse() {
@@ -28,9 +30,10 @@ public abstract class HouseTemplate {
         System.out.println("Building foundation with cement,iron rods and sand");
     }
 }
-```   
+```
 
-創建含有模板方法的木屋及玻璃屋。
+Create wooden and glass houses that contain a template method.
+
 ```java
 public class WoodenHouse extends HouseTemplate {
     @Override
@@ -65,9 +68,10 @@ public class GlassHouse extends HouseTemplate {
         System.out.println("Building Glass Windows");
     }
 }
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 HouseTemplate houseType = new WoodenHouse();
 houseType.buildHouse();
@@ -76,9 +80,10 @@ System.out.println("");
 
 houseType = new GlassHouse();
 houseType.buildHouse();
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 Building foundation with cement,iron rods and sand
 Building Pillars with Wood coating

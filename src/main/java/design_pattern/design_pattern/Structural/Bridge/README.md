@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
 將抽象部分與實現部分分離，以便兩者可以獨立的變化。
 
-## 例子   
+## Example
 
-> 遊戲裡，不同的武器配合不同的附魔，Bridge Pattern可以創建單獨的附魔並根據需求附在不同的武器上。  
-  
-## 程式碼範例  
-建立Weapon和Enchantment介面。
+> 遊戲裡，不同的武器配合不同的附魔，Bridge Pattern 可以創建單獨的附魔並根據需求附在不同的武器上。
+
+## Programmatic Example
+
+建立 Weapon 和 Enchantment 介面。
+
 ```java
 public interface Weapon {
 
@@ -24,9 +26,10 @@ public interface Enchantment {
 
   void onDeactivate();
 }
-```   
+```
 
 實作武器，刀和劍。
+
 ```java
 public class Knife implements Weapon {
 
@@ -80,9 +83,10 @@ public class Sword implements Weapon {
     return enchantment;
   }
 }
-```   
+```
 
 實作附魔，火焰附魔和冰凍附魔。
+
 ```java
 public class FireEnchantment implements Enchantment {
 
@@ -119,9 +123,10 @@ public class IceEnchantment implements Enchantment {
   }
 
 }
-```   
+```
 
-程式執行：  
+Program execution：
+
 ```java
 Sword fireSword = new Sword(new FireEnchantment());
 fireSword.attack();
@@ -132,9 +137,10 @@ System.out.println();
 Knife iceKnife = new Knife(new IceEnchantment());
 iceKnife.attack();
 iceKnife.releaseEnchantment();
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 The weapon get fire enchantment.
 Sword attack

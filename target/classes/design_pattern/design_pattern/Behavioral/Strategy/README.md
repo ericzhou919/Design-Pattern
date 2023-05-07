@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-定義一系列演算法，並將其封裝起來，使他們可以相互替換，讓演算法在不影響使用它的客戶端的情況下獨立變化。
+Define a series of algorithms and encapsulate them to allow them to be interchangeable with one another, enabling the algorithms to vary independently without affecting the clients that use them.
 
-## 例子   
+## Example
 
->一位冒險者在遇到不同的怪物時，有不同的戰鬥策略。  
-  
-## 程式碼範例  
+> 一位冒險者在遇到不同的怪物時，有不同的戰鬥策略。
+
+## Programmatic Example
+
 創建戰鬥策略介面及實現。
+
 ```java
 public interface FightStrategy {
     void execute();
@@ -30,9 +32,10 @@ public class ItemAttack implements FightStrategy {
         System.out.println("Use ItemAttack");
     }
 }
-```   
+```
 
 創建冒險者。
+
 ```java
 public class Adventurer {
     FightStrategy fightStrategy;
@@ -48,9 +51,10 @@ public class Adventurer {
         this.fightStrategy = strategy;
     }
 }
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 Adventurer ad = new Adventurer();
 
@@ -65,9 +69,10 @@ ad.attack();
 System.out.println("Encounter special monster");
 ad.choiceStrategy(new ItemAttack());
 ad.attack();
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 Encounter normal monster
 Use NormalAttack

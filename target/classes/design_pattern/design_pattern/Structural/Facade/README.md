@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-將複雜的子系統封裝在一個簡單的接口後面。它隱藏了很多複雜性並使子系統易於使用。  
+將複雜的子系統封裝在一個簡單的接口後面。它隱藏了很多複雜性並使子系統易於使用。
 
-## 例子   
+## Example
 
-> 假設我們想要啟動汽車，需要經過很多複雜的操作，Facade Pattern使我們只需要2行代碼。  
-  
-## 程式碼範例  
+> 假設我們想要啟動汽車，需要經過很多複雜的操作，Facade Pattern 使我們只需要 2 行代碼。
+
+## Programmatic Example
+
 許多複雜的操作。
+
 ```java
 public class CarEngineFacade {
     private static final Integer DEFAULT_COOLING_TEMP = 90;
@@ -37,17 +39,19 @@ public class CarEngineFacade {
         airFlowController.off();
     }
 }
-```   
+```
 
-程式執行：  
+Program execution：
+
 ```java
 CarEngineFacade c = new CarEngineFacade();
 c.startEngine();
 System.out.println("");
 c.stopEngine();
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 Getting air measurements..
 Air provided!

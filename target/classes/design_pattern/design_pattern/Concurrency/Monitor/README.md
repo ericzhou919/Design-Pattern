@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-用於創建執行緒安全的物件，並防止併發應用程序中線程之間的衝突。 　
+用於創建執行緒安全的物件，並防止併發應用程序中線程之間的衝突。
 
-## 例子   
+## Example
 
-> 一群人想參觀一間房子，但同一時間只能有一個人能進入房子參觀。  
-  
-## 程式碼範例  
+> 一群人想參觀一間房子，但同一時間只能有一個人能進入房子參觀。
+
+## Programmatic Example
+
 創建訪客及房子。
+
 ```java
 public class Visitor implements Runnable {
   private VisitableHouse house;
@@ -40,9 +42,10 @@ public class VisitableHouse {
     };
   }
 }
-```  
+```
 
-程式執行： 
+Program execution：
+
 ```java
 VisitableHouse house = new VisitableHouse();
 Thread visitor1 = new Thread(new Visitor(house, "visitor#1"));
@@ -55,9 +58,10 @@ visitor2.start();
 visitor3.start();
 visitor4.start();
 visitor5.start();
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 visitor#2 is waiting for the visit
 visitor#5 is waiting for the visit
@@ -65,23 +69,33 @@ visitor#4 is waiting for the visit
 visitor#1 is waiting for the visit
 visitor#3 is waiting for the visit
 ```
-After 1 seconds：  
+
+After 1 seconds：
+
 ```java
 visitor#2 is visited the house
 ```
-After 2 seconds：  
+
+After 2 seconds：
+
 ```java
 visitor#3 is visited the house
 ```
-After 3 seconds：  
+
+After 3 seconds：
+
 ```java
 visitor#1 is visited the house
 ```
-After 4 seconds：  
+
+After 4 seconds：
+
 ```java
 visitor#4 is visited the house
 ```
-After 5 seconds：  
+
+After 5 seconds：
+
 ```java
 visitor#5 is visited the house
 ```

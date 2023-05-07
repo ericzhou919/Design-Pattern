@@ -1,9 +1,11 @@
-## 定義
+## Definition
 
 雙重檢查鎖定，是在進入同步塊之前和之後檢查延遲初始化對象的狀態以確定是否初始化對象的一種實踐。
-  
-## 程式碼範例  
-創建DoubleCheckedLockingSingleton。
+
+## Programmatic Example
+
+創建 DoubleCheckedLockingSingleton。
+
 ```java
 public class DoubleCheckedLockingSingleton{
     private static DoubleCheckedLockingSingleton instance;
@@ -22,16 +24,18 @@ public class DoubleCheckedLockingSingleton{
         return instance;
     }
 }
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 DoubleCheckedLockingSingleton singleton1 = DoubleCheckedLockingSingleton.getInstance();
 DoubleCheckedLockingSingleton singleton2 = DoubleCheckedLockingSingleton.getInstance();
-System.out.println(singleton1 == singleton2); 
-```  
+System.out.println(singleton1 == singleton2);
+```
 
-輸出：  
+Program output：
+
 ```java
 true
 ```

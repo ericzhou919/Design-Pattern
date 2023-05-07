@@ -1,15 +1,15 @@
-[English](README.md) ∙ [繁體中文](README-zh-TW.md)  
-
 ## Definition
 
-Separate the construction of a complex object from its representation so that the same construction process can create different representations.  
+Separate the construction of a complex object from its representation so that the same construction process can create different representations.
 
-## Example   
+## Example
 
 > When game players create a character, selecting the character's name, class, gender, appearance, etc., character generation will be a gradual process that is completed when all choices are ready.
-  
+
 ## Programmatic Example
+
 Create Character.
+
 ```java
 public final class Character {
   private  Profession profession;
@@ -53,9 +53,10 @@ public enum Sex {
     return name().toLowerCase();
   }
 }
-```  
+```
 
-Create Builder.  
+Create Builder.
+
 ```java
 public static class Builder {
 
@@ -88,15 +89,17 @@ public static class Builder {
 
 }
 
-```    
+```
 
 Program execution：
+
 ```java
 PlayerCharacter pc = new PlayerCharacter.Builder(Profession.WARRIOR, "Test").setHairColor(HairColor.BLACK).setSex(Sex.MALE).build();
 System.out.println("This your character: " + pc.toString());
-```  
+```
 
-Program output：  
+Program output：
+
 ```java
 This your character: [haircolor=black, name=Test, profession=warrior, sex=male]
 ```

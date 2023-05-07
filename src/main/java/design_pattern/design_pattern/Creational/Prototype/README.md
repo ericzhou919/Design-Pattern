@@ -1,12 +1,13 @@
-## 定義
+## Definition
 
-通過複製一個已經存在的實例來返回新的實例，而不是新建實例。
+Returning a new instance by copying an existing instance instead of creating a new one.
 
-## 例子   
+## Example
 
-> 創建新的UserList時，從舊的UserList使用Clone。  
-  
-## 程式碼範例  
+> When creating a new user list, use clone from the old user list.
+
+## Programmatic Example
+
 ```java
 public class Users implements Cloneable{
     private List<String> empList;
@@ -27,13 +28,13 @@ public class Users implements Cloneable{
     public List<String> getUsersList() {
         return empList;
     }
-    
+
     public void add(String s) {
         empList.add(s);
     }
-    
+
     public void remove(String s) {
-        if (empList.contains(s)) 
+        if (empList.contains(s))
             empList.remove(s);
     }
 
@@ -46,9 +47,10 @@ public class Users implements Cloneable{
         return new Users(temp);
     }
 }
-```   
+```
 
-程式執行：  
+Program execution：
+
 ```java
 Users userList = new Users();
 userList.initData();
@@ -66,9 +68,10 @@ System.out.println("newUser2 remove Test1");
 System.out.println("User List: "+ userList.getUsersList());
 System.out.println("newUser1 List: "+ newUser1.getUsersList());
 System.out.println("newUser2 List: "+ newUser2.getUsersList());
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 newUser1 clone by userList
 newUser2 clone by userList

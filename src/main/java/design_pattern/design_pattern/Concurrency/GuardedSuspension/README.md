@@ -1,9 +1,11 @@
-## 定義
+## Definition
 
-用於管理在執行操作之前需要獲取鎖和滿足先決條件的操作。  
-  
-## 程式碼範例  
-創建GuardedQueue。
+用於管理在執行操作之前需要獲取鎖和滿足先決條件的操作。
+
+## Programmatic Example
+
+創建 GuardedQueue。
+
 ```java
 public class GuardedQueue {
     private final Queue<Integer> sourceList;
@@ -32,9 +34,10 @@ public class GuardedQueue {
         notify();
     }
 }
-```    
+```
 
-程式執行：  
+Program execution：
+
 ```java
 GuardedQueue guardedQueue = new GuardedQueue();
 ExecutorService executorService = Executors.newFixedThreadPool(3);
@@ -57,20 +60,25 @@ try {
 } catch (InterruptedException e) {
     e.printStackTrace();
 }
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 Waiting
 Waiting
 ```
-After 2 seconds：  
+
+After 2 seconds：
+
 ```java
 Putting
 Notifying
 Getting
 ```
-After 4 seconds：  
+
+After 4 seconds：
+
 ```java
 Putting
 Notifying

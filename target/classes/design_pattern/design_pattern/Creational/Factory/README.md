@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-定義一個用於建立物品的介面，讓子類決定實體化哪一個類別。工廠方法使一個類別的實例化延遲到其子類別。
+Define an interface for creating objects and let the subclass decide which class to instantiate. The Factory Method pattern defers instantiation of a class to its subclasses.
 
-## 例子   
+## Example
 
-> 硬幣工廠可以製造五元及十元等各種不同的硬幣，並且必須能夠在不修改現有源代碼的情況下在它們之間進行切換。  
-  
-## 程式碼範例  
-建立硬幣的介面和不同硬幣種類的實現。
+> The coin factory can manufacture various types of coins, such as five-dollar coins and ten-dollar coins, and must be able to switch between them without modifying existing source code.
+
+## Programmatic Example
+
+Create an interface for coins and implement different types of coins.
+
 ```java
 public interface Coin {
     void getDescription();
@@ -26,16 +28,18 @@ public class TenDollarCoin implements Coin {
         System.out.println("This is a ten dollar coin.");
     }
 }
-```  
+```
 
-定義可製造的硬幣種類。  
+Defines the types of coins that can be created.
+
 ```java
 public enum CoinType {
     TEN, FIVE;
 }
-```  
+```
 
-設計一個工廠，創建封裝在工廠類中的硬幣對象。   
+Design a factory to create coin objects encapsulated in a factory class.
+
 ```java
 public class CoinFactory {
     public Coin getCoin(CoinType _coinType) {
@@ -47,18 +51,20 @@ public class CoinFactory {
         return null;
     }
 }
-```  
+```
 
-程式執行： 
+Program execution：
+
 ```java
 CoinFactory cf = new CoinFactory();
 Coin coinTen = cf.getCoin(CoinType.TEN);
 Coin coinFive = cf.getCoin(CoinType.FIVE);
 coinTen.getDescription();
 coinFive.getDescription();
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 This is a ten dollar coin.
 This is a five dollar coin.

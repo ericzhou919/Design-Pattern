@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-提供一種在不暴露其底層表示的情況下，依序訪問聚集物件元素的方法。  
+Provide a method for sequentially accessing the elements of a collection object without exposing its underlying representation.
 
-## 例子   
+## Example
 
-> 書櫃的書照著字母順序排列，依序讀取全部的書。  
-  
-## 程式碼範例  
-創建Aggregate和Iterator介面。
+> The books in the bookcase are arranged in alphabetical order, and are read sequentially in their entirety.
+
+## Programmatic Example
+
+Create Aggregate and Iterator interfaces.
+
 ```java
 public interface Aggregate {
     public abstract Iterator iterator();
@@ -19,9 +21,10 @@ public interface Iterator {
 
     public abstract Object next();
 }
-```  
+```
 
-創建Book的Aggregate和Iterator。
+Create Aggregate and Iterator for Book.
+
 ```java
 public class Book {
     private String name = "";
@@ -81,9 +84,10 @@ public class BookShelfIterator implements Iterator {
         return book;
     }
 }
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 BookShelf bookShelf = new BookShelf(4);
 bookShelf.appendBook(new Book("A Book"));
@@ -96,9 +100,10 @@ while (it.hasNext()) {
     Book book = (Book) it.next();
     System.out.println("" + book.getName());
 }
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 A Book
 B Book

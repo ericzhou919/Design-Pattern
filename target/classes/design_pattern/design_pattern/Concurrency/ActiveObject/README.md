@@ -2,12 +2,10 @@
 
 ## Definition
 
-將方法執行與對象的方法調用分離，每個對像都駐留在其控制線程中，目標是通過使用異步方法調用和用於處理請求的調度程序來引入並發性。
-
-## Programmatic Example
-
-創建 ActiveObject.
-
+Decouples method execution from method invocation for objects that each reside in their thread of control. The goal is to introduce concurrency, by using asynchronous method invocation, and a scheduler for handling requests. 
+  
+## Programmatic Example  
+Create ActiveObject.
 ```java
 public class ActiveObject {
   class Task implements Comparable<Task> {
@@ -46,10 +44,9 @@ public class ActiveObject {
   }
 }
 
-```
-
-Program execution：
-
+```  
+ 
+Program execution：  
 ```java
 ActiveObject obj = new ActiveObject();
 Thread t1 = new Thread(() -> {
@@ -65,10 +62,9 @@ Thread.sleep(1000);
 t1.start();
 t2.start();
 t3.start();
-```
+```  
 
-Program output：
-
+Program output：  
 ```java
 Thread[Thread-1,5,main]
 Thread[Thread-2,5,main]

@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-使多個物件都有機會處理請求，從而避免請求的發送者和接收者之間的耦合關係。將這個物件連成一條鏈，並沿著這條鏈傳遞該請求，直到有一個物件處理它為止。
+Allow multiple objects to have a chance to handle a request, thus avoiding coupling between the sender and receiver of the request. Connect these objects into a chain and pass the request along the chain until an object handles it.
 
-## 例子   
+## Example
 
-> 你是一名新兵，正在新訓中心接受訓練，任何要求需要獲得長官批准才能去做。  
-  
-## 程式碼範例  
-建立抽象類別 Sir。
+> You are a new recruit undergoing training at the training center, and any requests must be approved by the commanding officer before you can proceed.
+
+## Programmatic Example
+
+Create an abstract class Sir。
+
 ```java
 abstract class Sir {
    private Sir next;
@@ -32,15 +34,15 @@ abstract class Sir {
    public void requestFailed() {
       System.out.println("No one has the right to approve.");
    }
-   
+
    public abstract void handleRequest(int LeaveDays);
 }
-```  
+```
 
-實作班長、排長、連長。  
+Implement SquadLeader,PlatoonLeader,CompanyLeader.
+
 ```java
 class SquadLeader extends Sir {
-   // 班長
    public SquadLeader() {
       super("SquadLeader");
    }
@@ -59,7 +61,6 @@ class SquadLeader extends Sir {
 }
 
 class PlatoonLeader extends Sir {
-   // 排長
    public PlatoonLeader() {
       super("PlatoonLeader");
    }
@@ -78,7 +79,6 @@ class PlatoonLeader extends Sir {
 }
 
 class CompanyLeader extends Sir {
-   // 連長
    public CompanyLeader() {
       super("CompanyLeader");
    }
@@ -95,9 +95,10 @@ class CompanyLeader extends Sir {
       }
    }
 }
-```    
+```
 
-程式執行：  
+Program execution：
+
 ```java
 Sir SquadLeader = new SquadLeader();
 Sir PlatoonLeader = new PlatoonLeader();
@@ -105,14 +106,14 @@ Sir CompanyLeader = new CompanyLeader();
 SquadLeader.setNext(PlatoonLeader);
 PlatoonLeader.setNext(CompanyLeader);
 
-//放入不同等級的Request
 SquadLeader.handleRequest(1);
 SquadLeader.handleRequest(2);
 SquadLeader.handleRequest(3);
 SquadLeader.handleRequest(4);
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 SquadLeader approve your level 1 request.
 PlatoonLeader approve your level 2 request.

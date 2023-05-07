@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-訪問者模式是一種將演算法與對象結構分離的模式。  
+Visitor pattern is a pattern that separates algorithms from object structures.
 
-## 例子   
+## Example
 
-> 一支軍隊的樹狀結構，訪問者模式使我們可以輕易創建新物件，與單獨或全部成員互動。  
-  
-## 程式碼範例  
+> A tree structure of a military unit, the Visitor pattern allows us to easily create new objects and interact with individual or all members.
+
+## Programmatic Example
+
 Create Unit and UnitVisitor。
+
 ```java
 public abstract class Unit {
 
@@ -29,12 +31,13 @@ public interface UnitVisitor {
 
     void visit(Commander commander);
 }
-```  
+```
 
 Create unit members。
+
 ```java
 public class Commander extends Unit {
-    
+
     public Commander(Unit... children) {
         super(children);
     }
@@ -81,9 +84,10 @@ public class Soldier extends Unit {
         return "soldier";
     }
 }
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 Commander commander = new Commander(
         new Sergeant(new Soldier(), new Soldier(), new Soldier()),
@@ -96,9 +100,10 @@ commander.accept(new SergeantVisitor());
 System.out.println("");
 
 commander.accept(new CommanderVisitor());
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 Hello soldier
 Hello soldier

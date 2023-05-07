@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-將複雜對象的「構造」與「表示」分開，以便相同的構造過程可以創建不同的表示。
+Separate the construction of a complex object from its representation so that the same construction process can create different representations.
 
-## 例子   
+## Example
 
-> 遊戲玩家創建角色時，選擇角色的姓名、職業、性別、外貌等，角色生成將成為一個循序漸進的過程，當所有選擇都準備時完成。  
-  
-## 程式碼範例  
-建立角色屬性。
+> When game players create a character, selecting the character's name, class, gender, appearance, etc., character generation will be a gradual process that is completed when all choices are ready.
+
+## Programmatic Example
+
+Create Character.
+
 ```java
 public final class Character {
   private  Profession profession;
@@ -51,9 +53,10 @@ public enum Sex {
     return name().toLowerCase();
   }
 }
-```  
+```
 
-建立Builder。  
+Create Builder.
+
 ```java
 public static class Builder {
 
@@ -86,15 +89,17 @@ public static class Builder {
 
 }
 
-```    
+```
 
-程式執行：  
+Program execution：
+
 ```java
 PlayerCharacter pc = new PlayerCharacter.Builder(Profession.WARRIOR, "Test").setHairColor(HairColor.BLACK).setSex(Sex.MALE).build();
 System.out.println("This your character: " + pc.toString());
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 This your character: [haircolor=black, name=Test, profession=warrior, sex=male]
 ```

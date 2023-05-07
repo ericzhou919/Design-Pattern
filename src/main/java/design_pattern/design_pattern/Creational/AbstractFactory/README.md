@@ -1,20 +1,20 @@
-[English](README.md) ∙ [繁體中文](README-zh-TW.md)
-
 ## Definition
 
-Provide an interface for creating families of related or dependent objects without specifying their concrete classes.    
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
 
-## Example   
+## Example
 
-> The food factory creates different combinations of food based on various types of staple foods and meats.    
+> The food factory creates different combinations of food based on various types of staple foods and meats.
 
-|  | Beef |Pork|
-|-------|:-----:|:------:|
-| Noodles   |  BeefNoodles  |PorkNoodles|
-| Rice   |  BeefRice  |   PorkRice |  
-  
-## Programmatic Example  
-First, create the interface and implementation for the food.  
+|         |    Beef     |    Pork     |
+| ------- | :---------: | :---------: |
+| Noodles | BeefNoodles | PorkNoodles |
+| Rice    |  BeefRice   |  PorkRice   |
+
+## Programmatic Example
+
+First, create the interface and implementation for the food.
+
 ```java
 public interface Rice {
     void getDescription();
@@ -36,9 +36,10 @@ public class BeefNoodles implements Noodles {
         System.out.println("This is the Beef Noodles!");
     }
 }
-```  
+```
 
-Then, create the interface and implementation for the food factory.  
+Then, create the interface and implementation for the food factory.
+
 ```java
 public interface FoodFactory {
     Noodles createNoodles();
@@ -70,9 +71,10 @@ public class PorkFoodFactory implements FoodFactory {
         return new PorkRice();
     }
 }
-```  
+```
 
-Next, design a factory that uses different food factories.  
+Next, design a factory that uses different food factories.
+
 ```java
 public static class FactoryMaker {
     public enum MeatType {
@@ -89,9 +91,10 @@ public static class FactoryMaker {
         }
     }
 }
-```  
+```
 
-Program execution：  
+Program execution：
+
 ```java
 private final static Food food = new Food();
 public static void UseAbstractFactory()
@@ -110,9 +113,10 @@ public static void createFood(final Food.FactoryMaker.MeatType type) {
     food.setNoodles(foodFactory.createNoodles());
     food.setRice(foodFactory.createRice());
 }
-```  
+```
 
-Program output：  
+Program output：
+
 ```java
 This is the Beef Noodles!
 This is the Beef Rice!

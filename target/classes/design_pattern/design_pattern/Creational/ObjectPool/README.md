@@ -1,13 +1,15 @@
-## 定義
+## Definition
 
-物件池包含一組已經初始化過且可以使用的物件，而可以在有需求時創建和銷毀物件。使用者可以從池子中取得物件，對其進行操作處理，並在不需要時歸還給池子而非直接銷毀它。
+An object pool contains a set of pre-initialized and usable objects that can be created and destroyed as needed. Users can retrieve objects from the pool, perform operations on them, and return them to the pool when they're no longer needed instead of destroying them directly.
 
-## 例子   
+## Example
 
-> 在遊戲世界裡，創建巨人的成本非常高，使用完將資源丟回池，下次使用時就不需要再次創建。  
-  
-## 程式碼範例  
-建立Giants。
+> In the gaming world, creating a giant costs a lot of resources, returning the resources to the pool after use, there's no need to create it again the next time it's used.
+
+## Programmatic Example
+
+Create Giants。
+
 ```java
 public class Giants {
     private static final AtomicInteger counter = new AtomicInteger(0);
@@ -28,9 +30,10 @@ public class Giants {
         return String.format("Giants id=%d", id);
     }
 }
-```  
+```
 
-建立ObjectPool和GiantsPool。
+Create ObjectPool and GiantsPool。
+
 ```java
 public abstract class ObjectPool<T> {
 
@@ -67,9 +70,10 @@ public class GiantsPool extends ObjectPool<Giants> {
         return new Giants();
     }
 }
-```  
+```
 
-程式執行：  
+Program execution：
+
 ```java
 GiantsPool gp = new GiantsPool();
 System.out.println(gp.toString());
@@ -90,9 +94,10 @@ System.out.println(g4.toString());
 Giants g5 = gp.acquire();
 System.out.println(g5.toString());
 System.out.println("after acquire " + gp.toString());
-```  
+```
 
-輸出：  
+Program output：
+
 ```java
 Pool available=0 inUse=0
 Giants id=1
