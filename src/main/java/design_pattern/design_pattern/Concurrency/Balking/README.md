@@ -1,6 +1,6 @@
 ## Definition
 
-用於防止對像在處於不完整或不適當狀態時，阻止或拒絕請求。
+Used to prevent or reject requests when an object is in an incomplete or inappropriate state.
 
 ## Example
 
@@ -8,7 +8,7 @@
 
 ## Programmatic Example
 
-建立洗衣機。
+Create WashingMachine。
 
 ```java
 public enum WashingMachineState {
