@@ -1,14 +1,14 @@
 ## Definition
 
-用於創建執行緒安全的物件，並防止併發應用程序中線程之間的衝突。
+Used to create thread-safe objects and prevent conflicts between threads in concurrent applications.  
 
 ## Example
 
-> 一群人想參觀一間房子，但同一時間只能有一個人能進入房子參觀。
+> A group of people want to visit a house, but only one person can enter the house at a time.  
 
 ## Programmatic Example
 
-創建訪客及房子。
+Create a visitor and a house and perform entering the house.  
 
 ```java
 public class Visitor implements Runnable {
