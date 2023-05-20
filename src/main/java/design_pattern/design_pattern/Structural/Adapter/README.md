@@ -1,14 +1,14 @@
 ## Definition
 
-將一個類別的接口轉換為客戶期望的另一個接口。Adapter 可以讓不相容介面的類別能夠一起工作。
+An adapter converts the interface of a class into another interface that the client expects. It enables classes with incompatible interfaces to work together.
 
 ## Example
 
-> 假設我們有一隻鳥發出 A 聲音和玩具鴨發出 B 聲音，突然客戶希望玩具鴨能夠發出鳥的聲音，我們只需要使用適配器，將鳥的實例傳遞到適配器。
+> Assuming we have a bird that makes sound chirp and a toy duck that makes sound squeak, and suddenly the customer wants the toy duck to make the bird's sound. In this case, we can simply use an adapter by passing the instance of the bird to the adapter.  
 
 ## Programmatic Example
 
-創建鳥的介面及實作。
+Create the interface and implementation of the bird.
 
 ```java
 public interface Bird {
@@ -28,7 +28,7 @@ public class Sparrow implements Bird {
 }
 ```
 
-創建玩具鴨的介面及實作。
+Create the interface and implementation of the toy duck.
 
 ```java
 public interface ToyDuck {
@@ -42,7 +42,7 @@ public class PlasticToyDuck implements ToyDuck {
 }
 ```
 
-創建 Adapter。
+Create Adapter。
 
 ```java
 public class BirdAdapter implements ToyDuck {
