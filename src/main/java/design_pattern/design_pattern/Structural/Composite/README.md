@@ -1,14 +1,14 @@
 ## Definition
 
-描述一組對象，它們被視為同一類型對象的單個實例。組合的目的是將對象“組合”成樹結構以表示部分整體層次結構。實施複合模式可以使客戶統一處理各個對象和合成。
+Describe a group of objects that are treated as individual instances of the same type of object. The purpose of composition is to "compose" these objects into a tree structure to represent a hierarchical structure of parts and wholes. Implementing the composite pattern enables clients to handle individual objects and compositions uniformly.
 
 ## Example
 
-> 公司部門由高至低分別有 CEO、各部門主管、各部門員工，我們將創建各層級人員並依序 print。
+> The company's departments from high to low have CEOs, department heads, and employees of each department. We will create personnel at each level and print them in order.
 
 ## Programmatic Example
 
-創建 Employee。
+Create Employee。
 
 ```java
 public class Employee {
