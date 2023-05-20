@@ -8,7 +8,7 @@ Describe a group of objects that are treated as individual instances of the same
 
 ## Programmatic Example
 
-Create Employee。
+Create Employee
 
 ```java
 public class Employee {
