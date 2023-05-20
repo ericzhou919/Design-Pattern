@@ -8,7 +8,7 @@ Capture the internal state of an object without violating encapsulation, and sav
 
 ## Programmatic Example
 
-Create Memento。
+Create Memento
 
 ```java
 public class Memento {
@@ -48,7 +48,7 @@ public class Originator {
 }
 ```
 
-Create CareTaker。
+Create CareTaker
 
 ```java
 import java.util.ArrayList;
