@@ -4,11 +4,11 @@ Define a series of algorithms and encapsulate them to allow them to be interchan
 
 ## Example
 
-> 一位冒險者在遇到不同的怪物時，有不同的戰鬥策略。
+> An adventurer has different battle strategies when encountering various monsters.  
 
 ## Programmatic Example
 
-創建戰鬥策略介面及實現。
+Create battle strategy interface and implementation.
 
 ```java
 public interface FightStrategy {
@@ -34,7 +34,7 @@ public class ItemAttack implements FightStrategy {
 }
 ```
 
-創建冒險者。
+Create Adventurer。
 
 ```java
 public class Adventurer {
