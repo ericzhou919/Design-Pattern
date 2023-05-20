@@ -21,7 +21,7 @@ Research and study the concepts and implementation examples of design patterns b
 * [ChainOfResponsibility](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/ChainOfResponsibility)
 * [Command](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Command)
 * [Iterator](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Iterator)
-* [Memento](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Memento)
+* [Memento](https://github.com/ericzhou919/Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/%EF%BC%ADemento)
 * [NullObject](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/NullObject)
 * [State](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/State)
 * [Strategy](https://github.com/zhouchenyu000/Practice-Design-Pattern/tree/main/src/main/java/design_pattern/design_pattern/Behavioral/Strategy)
