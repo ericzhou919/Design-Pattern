@@ -1,6 +1,6 @@
 ## Definition
 
-用於管理在執行操作之前需要獲取鎖和滿足先決條件的操作。
+Operations that require acquiring a lock and satisfying prerequisites before execution are managed using a mutex.
 
 ## Programmatic Example
 
