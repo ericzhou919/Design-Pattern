@@ -1,22 +1,22 @@
 ## Definition
 
-爲其他物件提供一種代理以控制對這個物件的訪問。
+To provide a proxy for another object to control access to it.  
 
-## 代理類型
+## Proxy type
 
-- 遠程代理：讓一個位於不同地址的物件，提供一個區域的代表物件。如可以將美國地區的服務通過代理模式變成台灣地區服務的一部分。
-- 虛擬代理：將一個需要消耗很大資源或者比較複雜的物件延遲到真正需要時才建立。如載入圖片時，圖檔過大，先用小檔圖片 Proxy 來代替真正的圖片，當真實圖片載入完成後，再實際顯示給客戶端。
-- 保護代理：控制原始物件存取權限。
-- 智慧代理：用於調用目標物件時，代理附加一些額外的功能。比如：紀錄訪問的流量。
-- 快取代理：將物件的運算結果儲存在臨時的共同空間，不同客戶端可以取這些共同的結果。
+- Remote Proxy: Enables an object located at a different address to provide a local representative object. For instance, it allows services in the United States to be incorporated as part of services in Taiwan through the proxy pattern.
+- Virtual Proxy: Defers the creation of a resource-intensive or complex object until it is actually needed. For instance, when loading images, if the image file is excessively large, a proxy with a smaller thumbnail image is used as a substitute. Once the actual image is loaded, it is displayed to the client.
+- Protection Proxy: Controls access permissions to the original object.
+- Smart Proxy: Used to invoke the target object while adding additional functionality, such as recording access logs or traffic.  
+- Caching Proxy: Stores the computed results of an object in a temporary shared space, allowing different clients to retrieve these shared results.
 
 ## Example
 
-> 此範例示範保護代理，代理首先檢查您要連接的主機，如果它不是受限制網站列表的一部分，那麼它將連接到真正的網路。
+> This example demonstrates a Protection Proxy where the proxy first checks the host you want to connect to. If it is not part of the restricted website list, it will connect to the actual network.  
 
 ## Programmatic Example
 
-創建 Internet 介面和實作 RealInternet。
+Create Internet interface and implement RealInternet.  
 
 ```java
 public interface Internet {
@@ -31,7 +31,7 @@ public class RealInternet implements Internet {
 }
 ```
 
-創建 ProxyInternet。
+Create ProxyInternet。
 
 ```java
 public class ProxyInternet implements Internet {
