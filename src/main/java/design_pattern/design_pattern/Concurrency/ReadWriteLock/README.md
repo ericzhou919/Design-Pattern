@@ -1,10 +1,10 @@
 ## Definition
 
-用於保護共享資源的讀寫訪問。讀寫鎖允許多個讀取者同時存取共享資源，但當有一個寫入者在寫入時，其他的讀取者和寫入者都必須等待。這樣可以避免在寫入時發生共享資源的不一致性。
+Read-write locks are used to protect shared resources during read and write access. Read locks allow multiple readers to access the shared resource simultaneously, but when a writer is writing, other readers and writers must wait. This helps avoid inconsistencies in the shared resource during write operations.  
 
 ## Programmatic Example
 
-創建 Reader。
+Create Reader.  
 
 ```java
 public class Reader implements Runnable {
@@ -48,7 +48,7 @@ public class Reader implements Runnable {
 }
 ```
 
-創建 Writer。
+Create Writer.
 
 ```java
 public class Writer implements Runnable {
@@ -92,7 +92,7 @@ public class Writer implements Runnable {
 }
 ```
 
-創建 ReaderWriterLock。
+Create ReaderWriterLock.
 
 ```java
 public class ReaderWriterLock implements ReadWriteLock {
