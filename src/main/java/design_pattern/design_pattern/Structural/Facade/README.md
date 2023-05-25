@@ -1,14 +1,14 @@
 ## Definition
 
-將複雜的子系統封裝在一個簡單的接口後面。它隱藏了很多複雜性並使子系統易於使用。
+The complex subsystem is encapsulated behind a simple interface, which hides many complexities and makes the subsystem easy to use.  
 
 ## Example
 
-> 假設我們想要啟動汽車，需要經過很多複雜的操作，Facade Pattern 使我們只需要 2 行代碼。
+> Assuming we want to start a car, which involves many complex operations, the Facade Pattern allows us to achieve it with just 2 lines of code.  
 
 ## Programmatic Example
 
-許多複雜的操作。
+Many complex operations.  
 
 ```java
 public class CarEngineFacade {
