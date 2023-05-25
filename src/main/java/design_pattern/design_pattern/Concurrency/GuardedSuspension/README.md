@@ -4,7 +4,7 @@ Operations that require acquiring a lock and satisfying prerequisites before exe
 
 ## Programmatic Example
 
-創建 GuardedQueue。
+Create GuardedQueue
 
 ```java
 public class GuardedQueue {
