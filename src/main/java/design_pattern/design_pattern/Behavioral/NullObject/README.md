@@ -1,10 +1,10 @@
 ## Definition
 
-提供一個給定類型的空對象代理，這個空對像不執行任何動作，對他的合作對象隱藏細節。
+Provide a null object proxy for a given type that doesn't perform any actions and hides the details from its collaborators.  
 
 ## Example
 
-> Null Object Pattern 中，Null 對像不是檢查空值，而是反應一個不做任何動作的關係。
+> In the Null Object Pattern, the Null object is not about checking for null values but rather represents a relationship that does nothing.  
 
 ## Programmatic Example
 
@@ -20,7 +20,7 @@ public abstract class AbstractCustomer {
 }
 ```
 
-實作 RealCustomer。
+Implement RealCustomer.
 
 ```java
 public class RealCustomer extends AbstractCustomer {
@@ -41,7 +41,7 @@ public class RealCustomer extends AbstractCustomer {
 }
 ```
 
-實作 NullCustomer。
+Implement NullCustomer.
 
 ```java
 public class NullCustomer extends AbstractCustomer {
