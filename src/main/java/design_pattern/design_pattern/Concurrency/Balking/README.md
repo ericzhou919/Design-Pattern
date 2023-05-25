@@ -8,7 +8,7 @@ Used to prevent or reject requests when an object is in an incomplete or inappro
 
 ## Programmatic Example
 
-Create WashingMachine。
+Create WashingMachine
 
 ```java
 public enum WashingMachineState {
