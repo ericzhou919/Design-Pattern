@@ -1,14 +1,14 @@
 ## Definition
 
-允許一個對像在其內部狀態改變時改變它的行為，該對像會更改其類別。
+An object that can change its behavior when its internal state changes is allowed to modify its class.  
 
 ## Example
 
-> 一隻長毛象，平時很溫和，當受到威脅時，會變得憤怒。
+> An elephant, which is usually gentle, becomes angry when threatened.  
 
 ## Programmatic Example
 
-建立 State 介面及實作。
+Create State interface and implementation
 
 ```java
 public interface State {
@@ -57,7 +57,7 @@ public class AngryState implements State {
 }
 ```
 
-建立 Mammoth。
+Create Mammoth
 
 ```java
 public class Mammoth {
