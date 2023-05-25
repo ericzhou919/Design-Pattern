@@ -1,14 +1,14 @@
 ## Definition
 
-動態地將責任加諸於物件上，提供比繼承更有彈性的替代方案。
+Dynamically imposing responsibilities on objects provides a more flexible alternative to inheritance.  
 
 ## Example
 
-> 一對男女正要用餐，但沒有餐具，要為他們新增餐具，不需要創建新的物件，而是用餐具動態地裝飾。
+> A couple is about to have a meal, but they don't have any utensils. To add utensils for them without creating new objects, you can dynamically decorate the utensils.  
 
 ## Programmatic Example
 
-創建 People 介面及實作。
+Create the People interface and implementation.
 
 ```java
 public interface People {
@@ -32,7 +32,7 @@ public class Woman implements People {
 }
 ```
 
-為男女添加餐具。
+To add utensils for the couple.  
 
 ```java
 public class PeopleWithFork implements People {
