@@ -1,10 +1,10 @@
 ## Definition
 
-雙重檢查鎖定，是在進入同步塊之前和之後檢查延遲初始化對象的狀態以確定是否初始化對象的一種實踐。
+Double-checked locking is a practice of checking the state of a lazily initialized object both before and after entering a synchronized block to determine whether the object has been initialized.  
 
 ## Programmatic Example
 
-創建 DoubleCheckedLockingSingleton。
+Create DoubleCheckedLockingSingleton
 
 ```java
 public class DoubleCheckedLockingSingleton{
