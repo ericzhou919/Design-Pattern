@@ -4,7 +4,7 @@ Read-write locks are used to protect shared resources during read and write acce
 
 ## Programmatic Example
 
-Create Reader.  
+Create Reader 
 
 ```java
 public class Reader implements Runnable {
@@ -48,7 +48,7 @@ public class Reader implements Runnable {
 }
 ```
 
-Create Writer.
+Create Writer
 
 ```java
 public class Writer implements Runnable {
@@ -92,7 +92,7 @@ public class Writer implements Runnable {
 }
 ```
 
-Create ReaderWriterLock.
+Create ReaderWriterLock
 
 ```java
 public class ReaderWriterLock implements ReadWriteLock {
